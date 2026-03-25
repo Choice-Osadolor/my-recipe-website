@@ -1,0 +1,25 @@
+input{
+  width: 100%;
+}
+
+#recipe_form{
+width: 40%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+height: 30em;
+border: black 1px solid;
+padding: 5%;
+}
+
+#recipe_description{
+    padding: 10%;
+}
+
+.recipe_card{
+    width: 20em;
+}
+
+.thumbnail{
+    width: 100%;
+}

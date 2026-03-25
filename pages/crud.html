@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/crud.css">
+</head>
+<body>
+        <div>
+        <h1>Recipe Form</h1>
+        <p>Assemble a Recipe:</p>            
+        </div>
+
+    <form id="recipe_form">
+
+        <label for="name">Recipe Name:</label>
+        <input type="text" name="name" id="recipe_name" placeholder="Recipe Name" required>
+
+        <label for="description">Recipe Description:</label>
+        <textarea type="text" name="description" id="recipe_description" placeholder="Recipe Description" required></textarea>
+
+        <label for="thumbnail">Recipe's Image:</label>
+        <input type="text" name="thumbnail" id="recipe_thumbnail" placeholder="Recipe Thumbnail" required>
+
+        <label for="duration">Recipe Duration</label>
+        <text type="text" name="duration" id="recipe_duration" placeholder="Recipe Duration">
+        
+        <div id="ingredients_inputs">
+            <h1>Ingredientss</h1>
+              <button type="button" onclick="addInput('ingredients')">add</button>
+              <input type="text" name="ingredients" class="recipe_ingredients" placeholder="Add an Ingredient">
+        </div>
+
+        <div id="instructions_inputs">
+            <h1> Instructions</h1>
+              <button type="button" onclick="addInput('instructions')">add</button>
+              <input type="text" name="instructions" class="recipe_instructions" placeholder="Add an Instruction">
+        </div>
+
+        <button type="submit">Save Recipe</button>
+    </form>
+
+    <section id="container" class="container" style="display:flex; flex-direction: row; justify-content: space-evenly; flex-wrap: wrap;"></section>
+    <template id="template">
+            <div class="recipe_card">
+            <h1 class="name">Name</h1>
+            <p class="description"> Description</p>
+            <img src="" alt="recipe image" class="thumbnail">
+            <p class="duration"></p>
+
+            <div hidden>
+             <h2>Ingredients</h2>
+            <ul class="ingredients_list">
+                <li class="ingredients"></li>
+            </ul>       
+            </div>
+
+            <div hidden>
+            <h2>Instructions</h2>
+            <ol class="instructions_list">
+                <li class="instructions"> </li>
+            </ol>      
+            </div>
+
+            <a href="/recipepage.html?id" class="viewrecipe_btn"><button>view</button></a>
+        </div>
+    </template>
+<input type="text" id="delete_item" name="delete">
+<button id="delete_btn">delete</button>
+
+<script src="/scripts/crud.js"></script>
+</body>
+</html>
